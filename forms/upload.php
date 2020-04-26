@@ -17,18 +17,19 @@
         $uname = $_POST['uname'];
         $email = $_POST['email'];
         $description =  $_POST['comment'];
+        //$image =  $_POST['imgPreview'];
         echo "$uname $email $description";
     
     if(isset($_POST['submit']))
     {
         
         
-        $sql = "INSERT INTO `complain`(`Uname`, `Email`, `Description1`) VALUES (['$uname'],['$email'],['$description'])";
+        $sql = "INSERT INTO `complain` (`Uname`, `Email`, `Description1`) VALUES ('$uname', '$email', '$description')";
         if(mysqli_query($conn,$sql)){
-            echo "Not inserted";
+            echo "Inserted";
         }
         else{
-            echo "inserted";
+            echo "Not Inserted";
         }
     }
     

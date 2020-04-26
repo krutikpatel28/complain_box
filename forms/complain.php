@@ -97,7 +97,7 @@
 							<img name="imgPreview" id="imgPreview" hidden="true" src="" alt="your image" width="100" height="100" />
 							
 							<!-- Input button -->
-							<input id="imgFile" type="file" class="form-control-file" onchange="document.getElementById('imgPreview').src = window.URL.createObjectURL(this.files[0]), document.getElementById('imgPreview').hidden= false">
+							<input id="imgFile" name="imgFile" type="file" class="form-control-file" onchange="document.getElementById('imgPreview').src = window.URL.createObjectURL(this.files[0]), document.getElementById('imgPreview').hidden= false">
 						 </div>
 					</div>
 
