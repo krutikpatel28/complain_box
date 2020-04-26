@@ -16,14 +16,14 @@
     }
         $uname = $_POST['uname'];
         $email = $_POST['email'];
-        $ddescription =  $_POST['comment'];
-        echo "$uname $email $ddescription"
+        $description =  $_POST['comment'];
+        echo "$uname $email $description";
     
     if(isset($_POST['submit']))
     {
         
         
-        $sql = "INSERT INTO `complain`(`Uname`, `Email`, `Description1`) VALUES (['$uname'],['$email'],['$ddescription'])";
+        $sql = "INSERT INTO `complain`(`Uname`, `Email`, `Description1`) VALUES (['$uname'],['$email'],['$description'])";
         if(mysqli_query($conn,$sql)){
             echo "Not inserted";
         }

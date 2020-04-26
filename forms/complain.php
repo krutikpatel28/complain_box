@@ -62,7 +62,7 @@
 
 					
 
-					<!--<div class="wrap-input100 m-b-18 validate-input" >
+					<div class="wrap-input100 m-b-18 validate-input" >
 						<span class="label-input100">Category</span>
 						<select class="form-control" id="#">
 						  <option>Select Category of Complain</option>
@@ -72,7 +72,6 @@
 						  <option>Option 5</option>
 						</select>
 						<span class="focus-input100"></span>
-					</div>-->
 
 					
 
@@ -90,12 +89,17 @@
 						<textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
 					</div>
 
-					<!--<div class=" validate-input m-b-18" >
+					<div class=" validate-input m-b-18" >
 						<span class="label-input100">Photo</span>
 						<div class="form-group">
-							<input type="file" class="form-control-file" id="exampleFormControlFile1 " name="exampleFormControlFile1">
+
+							<!-- Image preview -->
+							<img name="imgPreview" id="imgPreview" hidden="true" src="" alt="your image" width="100" height="100" />
+							
+							<!-- Input button -->
+							<input id="imgFile" type="file" class="form-control-file" onchange="document.getElementById('imgPreview').src = window.URL.createObjectURL(this.files[0]), document.getElementById('imgPreview').hidden= false">
 						 </div>
-					</div>-->
+					</div>
 
 					<!-- <div class="flex-sb-m w-full p-b-30">
 						<div class="contact100-form-checkbox">
