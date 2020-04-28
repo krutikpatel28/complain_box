@@ -38,7 +38,7 @@
 					</span>	
 				</div>
 
-				<form class="login100-form validate-form" action="upload.php" method="POST">
+				<form class="login100-form validate-form" action="upload.php" method="POST" enctype="multipart/form-data">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Name</span>
 						<input class="input100" type="name" name="uname" id="uname" placeholder="Enter your name">
