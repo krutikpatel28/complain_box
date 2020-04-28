@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 04:42 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: Apr 28, 2020 at 09:14 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -31,7 +32,9 @@ CREATE TABLE `complain` (
   `id` int(11) NOT NULL,
   `Uname` text NOT NULL,
   `Email` varchar(100) NOT NULL,
-  `Description1` varchar(1000) NOT NULL
+  `Description1` varchar(1000) NOT NULL,
+  `ImagePath` varchar(100) NOT NULL,
+  `Time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -52,7 +55,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `Username`, `Password`) VALUES
 (1, 'testuser', 'testuserpass'),
-(2, 'Shalin', '1234');
+(2, 'Shalin', '1234'),
+(3, 'manu', 'manu');
 
 --
 -- Indexes for dumped tables
@@ -78,13 +82,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `complain`
 --
 ALTER TABLE `complain`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
